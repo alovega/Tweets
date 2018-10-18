@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Local Storage</title>
 </head>
 <body>
     <div id="content">
         <div class="container">
             <h1>Local Storage</h1>
             <div class="container__child">
-                <div class="row">
-                    <div class="form">
-                    <form action="#">
+                <div class="six columns">
                     <label for="Tweet">Tweet:</label>
-                    <textarea name="tweeting" id="tweet" class="text area"></textarea>
-                    <input type="submit" class="button" value="save tweet">
-                    </form>
+                    <div class="form">
+                        <form action="#">
+                            <label for="tweet"></label>
+                            <textarea name="tweeting" id="tweet" class="u-full-width"></textarea>
+                            <input type="submit" class="button u-full-width" value="save tweet">
+                        </form>
                     </div>
-                    <div class=" my content">
+                    <div class="six columns">
                         <h2>My tweets</h2>
                         <div id="tweet-list"></div>
                     </div>
