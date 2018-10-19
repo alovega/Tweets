@@ -23,10 +23,19 @@ div{
 
 h1, h2{
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 h1{
-    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 h2{
     line-height: 1.25;
@@ -104,4 +113,19 @@ textarea{
     content: "";
     display: table;
     clear: both;
+}
+
+.remove-tweet, .remove-tweet:hover{
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+a {
+    background-color: transparent;
+}
+
+li {
+    text-align: -webkit-match-parent;
 }
