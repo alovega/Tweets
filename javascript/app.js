@@ -37,12 +37,20 @@ function myTweet(e){
 
     //add my tweets to the localStorage
     addTweetsToLocalStorage(tweet);
+
+    //print an alert
+    alert('Tweet added');
+
+    this.reset();
 }
 
 function removeTweet(e){
     if(e.target.classList.contains('remove-tweet')){
         e.target.parentElement.remove();
     }
+
+    //remove from the storage 
+    removeTweetLocalStorage(e.target.parentElement.textContent);
 }
 
 function addTweetsToLocalStorage(tweet){
@@ -88,8 +96,25 @@ function localStorageOnLoad(){
     // add remove button to my list element
     li.appendChild(removeBtn);
 
-    //append my list to a do element
+    //append my list to a do element 
     tweetList.appendChild(li);
-
+     
     });
+}
+
+function removeTweetLocalStorage(tweet){
+    //get tweets from the storage
+    let tweets = getTweetsFromLocalStorage( )
+
+    //remove x from the tweet
+    const tweetDelete = tweet.substring(0, tweet.length - 1)
+ 
+    //loop through the tweets
+    tweets.forEach(function(tweetLS, index){
+        if(tweetDelete === tweetLS){
+            tweets.splice(index, 1)
+        }
+    });
+    //save the data
+    localStorage.setItem('tweets', JSON.stringify(tweets))
 }
